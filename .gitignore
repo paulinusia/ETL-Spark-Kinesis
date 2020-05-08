@@ -1,0 +1,5 @@
+/kinesis/__pycache__/*
+/config/config.py
+/data/
+/config/__pycache__/*
+/env/
