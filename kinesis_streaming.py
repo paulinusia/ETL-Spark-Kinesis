@@ -3,7 +3,6 @@ import os
 import json
 import boto3
 import praw 
-from profanity_check import predict, predict_prob
 from config.config import kinesis_config, reddit_config
 
 stream_name = 'reddit_news'
@@ -22,13 +21,12 @@ reddit = praw.Reddit(client_id = reddit_config.CLIENT_ID,
                    user_agent = reddit_config.SECRET_AGENT)
 
 
-subreddits = reddit.subreddit("worldnews+politics+news+UpliftingNews+space+science+technology+TrueNews+iran+Foodforthought+medicine+EverythingScience+Health+Bitcoin+CryptoCurrency+Economics+nasa+spacex+BTCNews+stocks+investing+StockMarket+teslamotors+businessnews+MachineLearning+aws" +
-                              "+TrueReddit+NewsOfTheWeird+indepthstories+europe+technews+todayilearned+nottheonion+YouShouldKnow+MusicNews+savedyouaclick+CanadaPolitics+environment+Futurology+ukpolitics+canada+unitedkingdom")
-
+# subreddits = reddit.subreddit("worldnews+politics+news+UpliftingNews+space+science+technology+TrueNews+iran+Foodforthought+medicine+EverythingScience+Health+Bitcoin+CryptoCurrency+Economics+nasa+spacex+BTCNews+stocks+investing+StockMarket+teslamotors+businessnews+MachineLearning+aws" +
+#                               "+TrueReddit+NewsOfTheWeird+indepthstories+europe+technews+todayilearned+nottheonion+YouShouldKnow+MusicNews+savedyouaclick+CanadaPolitics+environment+Futurology+ukpolitics+canada+unitedkingdom")
+subreddits = reddit.subreddit("all")
 
 def main():
     for submission in subreddits.stream.submissions():
-        print(predict_prob([submission.title]), submission.title)
 
         payload = { 'id': str(submission.name),
                     'submission': str(submission.title),
@@ -40,7 +38,7 @@ def main():
                                 StreamName=stream_name,
                                 Data=json.dumps(payload),
                                 PartitionKey= submission.name)
-                # print("Payload success:         {}".format(submission.name))
+                print("Payload success:         {}".format(submission.name))
 
         except (AttributeError, Exception) as e:
             print (e)
