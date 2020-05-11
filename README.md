@@ -16,10 +16,10 @@ The Architectural structure for the data pipeline is shown below:
 
 ## Sources and Acknowledgements
 
-[Apache Spark and AWS Kinesis Streaming Integration Documentation](https://spark.apache.org/docs/2.2.0/streaming-kinesis-integration.html)
-[Apache Spark Structured Streaming Guide](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#quick-example)
-[Optimization of Spark to process Kinesis Streams](https://aws.amazon.com/blogs/big-data/optimize-spark-streaming-to-efficiently-process-amazon-kinesis-streams/)
-[Real-time discovery platform with AWS](https://aws.amazon.com/blogs/big-data/building-a-near-real-time-discovery-platform-with-aws/)
-[DataBricks Clusters & Management](https://docs.databricks.com/clusters/index.html)
+[Apache Spark and AWS Kinesis Streaming Integration Documentation](https://spark.apache.org/docs/2.2.0/streaming-kinesis-integration.html)<br />
+[Apache Spark Structured Streaming Guide](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#quick-example)<br />
+[Optimization of Spark to process Kinesis Streams](https://aws.amazon.com/blogs/big-data/optimize-spark-streaming-to-efficiently-process-amazon-kinesis-streams/)<br />
+[Real-time discovery platform with AWS](https://aws.amazon.com/blogs/big-data/building-a-near-real-time-discovery-platform-with-aws/)<br />
+[DataBricks Clusters & Management](https://docs.databricks.com/clusters/index.html)<br />
 
 
