@@ -21,9 +21,12 @@ reddit = praw.Reddit(client_id = reddit_config.CLIENT_ID,
                    user_agent = reddit_config.SECRET_AGENT)
 
 
-# subreddits = reddit.subreddit("worldnews+politics+news+UpliftingNews+space+science+technology+TrueNews+iran+Foodforthought+medicine+EverythingScience+Health+Bitcoin+CryptoCurrency+Economics+nasa+spacex+BTCNews+stocks+investing+StockMarket+teslamotors+businessnews+MachineLearning+aws" +
-#                               "+TrueReddit+NewsOfTheWeird+indepthstories+europe+technews+todayilearned+nottheonion+YouShouldKnow+MusicNews+savedyouaclick+CanadaPolitics+environment+Futurology+ukpolitics+canada+unitedkingdom")
-subreddits = reddit.subreddit("all")
+#subreddits = reddit.subreddit("all")
+subreddits = reddit.subreddit("EverythingScience+Health+compsci+LadiesofScience+academia+"+
+"nottheonion+worldnews+politics+news+UpliftingNews+space+science+technology+TrueNews+iran+Foodforthought+medicine+"+
+"EverythingScience+Health+Bitcoin+CryptoCurrency+Economics+nasa+spacex+BTCNews+stocks+investing+StockMarket+teslamotors+"+
+"businessnews+MachineLearning+aws+TrueReddit+NewsOfTheWeird+indepthstories+europe+technews+todayilearned+nottheonion+"+
+"YouShouldKnow+MusicNews+savedyouaclick+CanadaPolitics+environment+Futurology+ukpolitics+canada+unitedkingdom")
 
 def main():
     for submission in subreddits.stream.submissions():

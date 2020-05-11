@@ -1,4 +1,4 @@
-All configurations go under this package.
+All configurations go under this package under a separate module.
 
 Configurations:
 
