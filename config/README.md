@@ -1,15 +1,15 @@
-All configurations go under this package under a separate module.
+All configurations go under this package under a separate module. <br />
 
-Configurations:
+Configurations:<br />
 
-kinesis_config:
-    REGION = ""
-    ACCESS_KEY = ""
-    SECRET = ""
+kinesis_config:<br />
+    REGION = ""<br />
+    ACCESS_KEY = ""<br />
+    SECRET = ""<br />
 
-reddit_config:
-    CLIENT_ID = ""
-    SECRET = ""
-    USERNAME = ""
-    PASSWORD = ""
-    SECRET_AGENT = ""
+reddit_config:<br />
+    CLIENT_ID = ""<br />
+    SECRET = ""<br />
+    USERNAME = ""<br />
+    PASSWORD = ""<br />
+    SECRET_AGENT = ""<br />
